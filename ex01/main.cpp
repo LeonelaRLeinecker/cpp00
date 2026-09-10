@@ -47,7 +47,7 @@ class PhoneBook {
             }
         }
 
-        void add(
+        void ADD(
             std::string firstName,
             std::string lastName,
             std::string nickName, 
@@ -65,6 +65,17 @@ class PhoneBook {
             index = (index + 1) % MAX_CONTACTS;
             if(count < MAX_CONTACTS) count++;
         }
+
+		void SEARCH(void)
+		{
+			std::string str;
+			for (int i = 0; i < count; i++)
+			{
+				str = this-phoneBook[i].
+
+			}
+
+		}
 
 
     private:
