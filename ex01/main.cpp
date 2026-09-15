@@ -24,6 +24,10 @@ int main()
 			phoneBook.addContact();
 		
 		}
+		else if (command == "SEARCH")
+		{
+			phoneBook.searchContact();
+		}
 		else if (command == "EXIT") {
 			break ;
 		}
