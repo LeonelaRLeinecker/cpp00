@@ -25,39 +25,39 @@ void PhoneBook::addContact() {
 	std::cout << "--- add new contact ---" << std::endl;
 	input = "";
 	while (input.empty()) {
-		std::cout << "enter your First name:";
+		std::cout << "enter your First name: ";
 		if (!std::getline(std::cin, input)) //controla error o cierre de programa
 			return ;
 	}
 	this->_contacts[pos].setFirstName(input);
 	input = "";
 	while (input.empty()) {
-		std::cout << "enter your Last name:";
+		std::cout << "enter your Last name: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
 	this->_contacts[pos].setLastName(input);
 	input = "";
 	while (input.empty()) {
-		std::cout << "enter your Nick name:";
+		std::cout << "enter your Nick name: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
 	this->_contacts[pos].setNickName(input);
 	input = "";
 	while (input.empty()) {
-		std::cout << "tipe your phone number: ";
+		std::cout << "enter your phone number: ";
 		if (!std::getline(std::cin, input))
 			return ;
 		if (!isNumeric(input)) {
 			std::cout << "Error: please type numbers." << std::endl;
-			std::cout << "tipe your phone number: ";
+			input = "";
 		}
 	}
 	this->_contacts[pos].setPhoneNumber(input);
 	input = "";
 	while (input.empty()) {
-		std::cout << "enter your darkest secret";
+		std::cout << "enter your darkest secret: ";
 		if (!std::getline(std::cin, input))
 		 return ;
 	}
@@ -71,6 +71,7 @@ void PhoneBook::addContact() {
 	std::cout << "Contact added successufuly on index [" << pos << "]\n" << std::endl;
 
 }
+
 
 void PhoneBook::_printFormattedColumn(std::string str) const {
 	// Si el texto supera los 10 caracteres, truncamos a 9 y añadimos '.'
